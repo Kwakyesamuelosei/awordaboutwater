@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* A Word About Water Brand Colors */
+    --primary-blue: #2FA4DD;
+    --deep-navy: #02172C;
+    --brand-black: #111111;
+    --text-gray: #7A7A7A;
+    --white: #FFFFFF;
+
+    /* Layout */
+    --section-padding: 100px 5%;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-body text-[var(--text-gray)] bg-white overflow-x-hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading text-[var(--primary-blue)] font-bold;
+    }
+}
+
+@layer components {
+    .container {
+        @apply max-w-[1200px] mx-auto px-5 w-full;
+    }
+
+    .btn-pill {
+        @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-block;
+    }
+
+    .section-title {
+        @apply text-4xl md:text-5xl mb-8 text-center;
+    }
+}
+
+/* Ken Burns Effect for Hero */
+@keyframes kenburns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.ken-burns {
+    animation: kenburns 20s ease-in-out infinite alternate;
+}
+
+/* Navbar Transition Styles */
+.nav-scrolled {
+    @apply bg-[var(--primary-blue)] shadow-lg py-3;
+}
+
+.nav-transparent {
+    @apply bg-transparent py-5;
+}
