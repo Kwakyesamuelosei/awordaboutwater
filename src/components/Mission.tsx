@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Mission() {
     return (
@@ -15,11 +16,13 @@ export default function Mission() {
                         viewport={{ once: true }}
                         className="relative group"
                     >
-                        <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                            <img
+                        <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                            <Image
                                 src="https://images.unsplash.com/photo-1601662583487-20630f298aed?auto=format&fit=crop&q=80&w=1000"
                                 alt="Children with clean water"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                fill
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                sizes="(max-w-768px) 100vw, 50vw"
                             />
                         </div>
                         {/* Decorative Blue Box */}
@@ -41,16 +44,15 @@ export default function Mission() {
                             for rural communities.
                         </h2>
                         <p className="text-lg text-[var(--text-gray)] mb-8 leading-relaxed">
-                            Drop of Water (DoW) is a youth-led local NGO established in June 2011.
-                            We are dedicated to improving the lives of rural communities through
-                            sustainable water, sanitation, and hygiene (WASH) initiatives.
+                            A Word About Water is a dedicated initiative improving the lives of rural communities
+                            through research-driven advocacy and sustainable water, sanitation, and hygiene (WASH) actions.
                         </p>
                         <p className="text-lg text-[var(--text-gray)] mb-8 leading-relaxed">
                             By empowering youth and engaging local stakeholders, we create lasting
                             impact that transforms health, education, and economic opportunities for thousands.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#impact" className="btn-pill bg-[var(--primary-blue)] text-white">
+                            <a href="#impact" id="mission-impact-link" className="btn-pill bg-[var(--primary-blue)] text-white">
                                 View Our Impact
                             </a>
                         </div>

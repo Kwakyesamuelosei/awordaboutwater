@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const stories = [
     {
@@ -46,11 +47,13 @@ export default function Stories() {
                             viewport={{ once: true }}
                             className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
                         >
-                            <div className="aspect-video overflow-hidden">
-                                <img
+                            <div className="aspect-video overflow-hidden relative">
+                                <Image
                                     src={story.image}
                                     alt={story.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    sizes="(max-w-768px) 100vw, 33vw"
                                 />
                             </div>
                             <div className="p-8">
@@ -63,7 +66,7 @@ export default function Stories() {
                                 <p className="text-[var(--text-gray)] text-sm leading-relaxed mb-6">
                                     {story.description}
                                 </p>
-                                <a href="#" className="text-[var(--primary-blue)] font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                                <a href="#" id={`read-story-${idx}`} className="text-[var(--primary-blue)] font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
                                     Read Full Story <span>→</span>
                                 </a>
                             </div>

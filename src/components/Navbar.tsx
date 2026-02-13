@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -41,11 +42,14 @@ export default function Navbar() {
                 }`}
         >
             <div className="container flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2">
-                    <img
+                <Link href="/" className="flex items-center gap-2" id="navbar-logo-link">
+                    <Image
                         src="https://img1.wsimg.com/isteam/ip/a4404514-38e7-479f-b2e9-fa9671d3fbe3/A%20Word%20About%20Water%20Logo.png/:/rs=w:104,h:104,cg:true,m/cr=w:104,h:104/qt=q:95"
                         alt="A Word About Water Logo"
+                        width={104}
+                        height={104}
                         className="h-12 md:h-16 w-auto"
+                        priority
                     />
                 </Link>
 
@@ -93,9 +97,10 @@ export default function Navbar() {
                     ))}
                     <Link
                         href="#donate"
+                        id="desktop-donate-button"
                         className={`px-8 py-2 rounded-full font-bold transition-all shadow-md uppercase text-sm ${scrolled
-                                ? "bg-[var(--brand-black)] text-white hover:bg-[var(--primary-blue)]"
-                                : "bg-white text-[var(--brand-black)] hover:bg-[var(--primary-blue)] hover:text-white"
+                            ? "bg-[var(--brand-black)] text-white hover:bg-[var(--primary-blue)]"
+                            : "bg-white text-[var(--brand-black)] hover:bg-[var(--primary-blue)] hover:text-white"
                             }`}
                     >
                         DONATE
@@ -104,6 +109,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Toggle */}
                 <button
+                    id="mobile-menu-toggle"
                     className={`lg:hidden text-2xl ${scrolled ? "text-[var(--brand-black)]" : "text-white"}`}
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >

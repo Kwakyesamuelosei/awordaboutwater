@@ -1,18 +1,28 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
+    const [year, setYear] = useState<number | null>(null);
+
+    useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
+
     return (
         <footer className="bg-navy text-white py-24">
             <div className="container px-5">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Column 1: About */}
                     <div className="md:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-8">
-                            <img
+                        <Link href="/" className="flex items-center gap-2 mb-8" id="footer-logo">
+                            <Image
                                 src="https://img1.wsimg.com/isteam/ip/a4404514-38e7-479f-b2e9-fa9671d3fbe3/A%20Word%20About%20Water%20Logo.png/:/rs=w:104,h:104,cg:true,m/cr=w:104,h:104/qt=q:95"
                                 alt="A Word About Water Logo"
+                                width={104}
+                                height={104}
                                 className="h-16 w-auto"
                             />
                             <span className="text-xl font-bold tracking-tight text-white uppercase">
@@ -64,7 +74,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-gray-800 mt-20 pt-10 text-center text-gray-500 text-xs">
-                    <p>&copy; {new Date().getFullYear()} Drop of Water. All rights reserved.</p>
+                    <p>&copy; {year || "..."} A Word About Water. All rights reserved.</p>
                 </div>
             </div>
         </footer>
