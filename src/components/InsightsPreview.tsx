@@ -29,31 +29,15 @@ export default function InsightsPreview() {
     return (
         <section className="py-24 bg-white" id="insights">
             <div className="container px-5">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
-                    <div className="max-w-2xl">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                            className="text-4xl md:text-5xl font-bold text-[var(--brand-black)]"
-                        >
-                            Featured Insights
-                        </motion.h2>
-                    </div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        className="hidden md:block"
+                <div className="flex flex-col items-center mb-16 text-center">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className="text-4xl md:text-5xl font-bold text-[var(--brand-black)]"
                     >
-                        <Link
-                            href="/insights"
-                            id="view-all-insights-desktop"
-                            className="text-[var(--primary-blue)] font-bold hover:underline inline-flex items-center gap-2"
-                        >
-                            Explore All Insights <span>→</span>
-                        </Link>
-                    </motion.div>
+                        Featured Insights
+                    </motion.h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
@@ -90,10 +74,10 @@ export default function InsightsPreview() {
                     ))}
                 </div>
 
-                <div className="md:hidden text-center">
+                <div className="text-center">
                     <Link
                         href="/insights"
-                        className="btn-pill bg-[var(--primary-blue)] text-white"
+                        className="btn-pill border-2 border-[var(--primary-blue)] text-[var(--primary-blue)] hover:bg-[var(--primary-blue)] hover:text-white"
                     >
                         Explore All Insights
                     </Link>

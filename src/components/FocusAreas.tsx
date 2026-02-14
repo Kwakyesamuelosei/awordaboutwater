@@ -39,7 +39,7 @@ export default function FocusAreas() {
     return (
         <section className="py-24 bg-[var(--background-light)]" id="focus-areas">
             <div className="container px-5">
-                <div className="text-center mb-16">
+                <div className="flex flex-col items-center mb-16 text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
