@@ -8,19 +8,19 @@ const insights = [
     {
         date: "Feb 12, 2025",
         title: "Advocacy Brief: The Governance Gap in Rural Water Systems",
-        tag: "Research",
+        tag: "Research & Analysis",
         image: "https://images.unsplash.com/photo-1760873059715-7c7cfbe2a2c6?auto=format&fit=crop&q=80&w=800"
     },
     {
         date: "Jan 28, 2025",
         title: "Moving Beyond Philanthropy: Financial Sustainability Models",
-        tag: "Policy Paper",
+        tag: "Policy Perspectives",
         image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800"
     },
     {
         date: "Jan 15, 2025",
         title: "Field Report: Institutional Strengthening in East Africa",
-        tag: "Field Study",
+        tag: "Practice & Field Insights",
         image: "https://images.unsplash.com/photo-1620829813552-f4a3590d2ce8?auto=format&fit=crop&q=80&w=800"
     }
 ];
