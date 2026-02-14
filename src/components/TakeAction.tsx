@@ -86,7 +86,7 @@ export default function TakeAction() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-[var(--primary-blue)] font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-8 block"
                         >
-                            Mobilize With Us
+                            TAKE ACTION
                         </motion.span>
 
                         <motion.h2
@@ -107,7 +107,9 @@ export default function TakeAction() {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-xl md:text-2xl text-white/70 mb-16 leading-relaxed max-w-3xl font-light"
                         >
-                            Join our network of researchers, advocates, and policymakers working to transform water governance. Together, we can ensure a sustainable and just water future for all.
+                            Addressing today’s water challenges requires collaboration across research, policy, and practice.
+                            <br /><br />
+                            We welcome engagement from organisations and individuals committed to strengthening sustainable and equitable water systems.
                         </motion.p>
 
                         <motion.div

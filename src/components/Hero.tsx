@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <section className="relative h-[80vh] md:h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Ken Burns Background */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
@@ -20,12 +20,12 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="container relative z-30 text-center px-5">
+            <div className="container relative z-30 text-center px-6">
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="text-white text-4xl md:text-7xl mb-6 font-bold leading-tight"
+                    className="text-white text-[1.6rem] xs:text-2xl sm:text-3xl md:text-7xl mb-8 font-extrabold tracking-tighter leading-tight whitespace-nowrap"
                 >
                     Evidence · Equity · Water
                 </motion.h1>
@@ -34,9 +34,9 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.8 }}
-                    className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto mb-12 font-medium"
+                    className="text-white/90 text-xl font-bold md:text-xl max-w-3xl mx-auto mb-14 leading-relaxed px-2"
                 >
-                    Advancing water justice through research, advocacy, and action
+                    Advancing water justice through <br className="md:hidden" /> research, advocacy, and action
                 </motion.p>
 
                 <motion.div
@@ -45,7 +45,7 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 1.2 }}
                     className="flex justify-center items-center"
                 >
-                    <a href="#donate" id="hero-donate-button" className="btn-pill bg-white text-[var(--primary-blue)] w-full md:w-auto text-center">
+                    <a href="#donate" id="hero-donate-button" className="btn-pill bg-white text-[var(--primary-blue)] w-full md:w-auto text-center py-5 text-lg font-bold shadow-2xl">
                         Donate Now
                     </a>
                 </motion.div>

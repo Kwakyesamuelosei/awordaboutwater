@@ -40,19 +40,11 @@ export default function FocusAreas() {
         <section className="py-24 bg-[var(--background-light)]" id="focus-areas">
             <div className="container px-5">
                 <div className="text-center mb-16">
-                    <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-[var(--primary-blue)] font-bold tracking-widest uppercase text-sm mb-4 block"
-                    >
-                        Strategic Work
-                    </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold text-[var(--primary-blue)]"
+                        className="text-4xl md:text-5xl font-bold text-[var(--brand-black)]"
                     >
                         Our Focus Areas
                     </motion.h2>

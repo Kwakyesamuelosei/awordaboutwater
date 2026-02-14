@@ -29,16 +29,8 @@ export default function InsightsPreview() {
     return (
         <section className="py-24 bg-white" id="insights">
             <div className="container px-5">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
                     <div className="max-w-2xl">
-                        <motion.span
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="text-[var(--primary-blue)] font-bold tracking-widest uppercase text-sm mb-4 block"
-                        >
-                            Knowledge Hub
-                        </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

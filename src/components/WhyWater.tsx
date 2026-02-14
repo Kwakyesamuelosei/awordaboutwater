@@ -3,49 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const philosophyPillars = [
-    {
-        title: "Governance over Scarcity",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-        ),
-        description: "Water challenges today are less about physical scarcity and more about how water is governed, financed, and sustained."
-    },
-    {
-        title: "Institutional Frameworks",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-        ),
-        description: "Systems fail not because solutions are unknown, but because institutions and long-term management are weak."
-    },
-    {
-        title: "Systems Strengthening",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-        ),
-        description: "Addressing water access requires strengthening the systems that deliver, manage and protect water — not only infrastructure."
-    }
-];
-
 export default function WhyWater() {
     return (
         <section className="py-24 bg-white" id="why-water">
             <div className="container px-5">
+                {/* Standardized Header matching Focus Areas */}
                 <div className="text-center mb-16">
-                    <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-[var(--primary-blue)] font-bold tracking-widest uppercase text-sm mb-4 block"
-                    >
-                        The Advocacy Shift
-                    </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -56,41 +19,63 @@ export default function WhyWater() {
                     </motion.h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    {philosophyPillars.map((pillar, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            viewport={{ once: true }}
-                            className="group p-8 bg-gray-50 rounded-2xl border-t-4 border-[var(--primary-blue)] hover:bg-white hover:shadow-2xl transition-all duration-500"
-                        >
-                            <div className="text-[var(--primary-blue)] mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                                {pillar.icon}
-                            </div>
-                            <h3 className="text-xl font-bold text-[var(--brand-black)] mb-4">
-                                {pillar.title}
-                            </h3>
-                            <p className="text-[var(--text-gray)] leading-relaxed font-medium">
-                                {pillar.description}
-                            </p>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <div className="text-center">
+                <div className="w-full">
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="bg-[#F9FAFB] rounded-[3rem] p-10 md:p-20 border border-gray-200 shadow-sm relative overflow-hidden group"
                     >
-                        <Link
-                            href="/why-water"
-                            className="btn-pill border-2 border-[var(--primary-blue)] text-[var(--primary-blue)] hover:bg-[var(--primary-blue)] hover:text-white"
-                        >
-                            Learn More About Why Water Matters
-                        </Link>
+                        {/* Decorative background accent */}
+                        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--primary-blue)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[var(--primary-blue)]/10 transition-colors duration-700" />
+
+                        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 text-lg md:text-xl lg:text-2xl leading-[1.6] text-[var(--brand-black)] font-medium">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="md:pr-8"
+                            >
+                                <p>
+                                    Water challenges today are less about <span className="text-[var(--primary-blue)] font-bold">physical scarcity</span> <br className="hidden xl:block" />
+                                    and more about how water is <span className="text-[var(--primary-blue)] font-bold">governed, financed, and sustained</span>.
+                                </p>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.4 }}
+                                className="md:border-l-2 md:border-gray-200 md:pl-12 lg:pl-16"
+                            >
+                                <p>
+                                    Systems fail not because solutions are <span className="text-[var(--primary-blue)] font-bold">unknown</span>, <br className="hidden xl:block" />
+                                    but because <span className="text-[var(--primary-blue)] font-bold">institutions and long-term management</span> are weak.
+                                </p>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.6 }}
+                                className="lg:border-l-2 lg:border-gray-200 lg:pl-16 md:col-span-2 lg:col-span-1"
+                            >
+                                <p>
+                                    Addressing water access requires <span className="text-[var(--primary-blue)] font-bold">strengthening the systems</span> <br className="hidden xl:block" />
+                                    that deliver, manage, and protect water – not only <span className="text-[var(--primary-blue)] font-bold">building infrastructure</span>.
+                                </p>
+                            </motion.div>
+                        </div>
+
+                        <div className="mt-20 pt-10 border-t border-gray-200 flex flex-col md:flex-row justify-center items-center gap-6 group/link relative z-10">
+                            <Link
+                                href="/why-water"
+                                className="text-[var(--primary-blue)] font-bold text-lg inline-flex items-center gap-3"
+                            >
+                                <span className="group-hover/link:translate-x-1 transition-transform inline-block">→</span> Explore Why Water Matters
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
             </div>
