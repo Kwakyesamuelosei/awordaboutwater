@@ -24,15 +24,14 @@ export default function Navbar() {
             name: "About Us",
             href: "#",
             dropdown: [
-                { name: "Who We Are", href: "#who-we-are" },
-                { name: "Why Water", href: "#why-water" },
-                { name: "Where We Focus", href: "#where-we-focus" },
-                { name: "Our Team", href: "#our-team" },
+                { name: "Who We Are", href: "/who-we-are" },
+                { name: "Why Water", href: "/why-water" },
+                { name: "Where We Focus", href: "/where-we-focus" },
             ]
         },
-        { name: "Our Campaigns", href: "#campaigns" },
-        { name: "Take Action", href: "#take-action" },
-        { name: "Insights", href: "#insights" },
+        { name: "Our Campaigns", href: "/campaigns" },
+        { name: "Take Action", href: "/take-action" },
+        { name: "Insights", href: "/insights" },
         { name: "Press Releases", href: "#press" },
     ];
 
